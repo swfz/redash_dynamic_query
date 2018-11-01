@@ -1,8 +1,6 @@
 # RedashDynamicQuery
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/redash_dynamic_query`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+execute query to redash with dynamic parameter
 
 ## Installation
 
@@ -22,7 +20,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+```
+redash = RedashDynamicQuery::Client.new(user_apikey: 'xxxxxx', endpoint: 'https://......')
+params = {
+  from: '2018-10-01',
+  to: '2018-10-31'
+}
+result = redash.query(query_id: 1, params: params)
+
+p result['query_result']['data']
+
+# {
+#   "columns" => [
+#     {"friendly_name"=>"name", "type"=>"string", "name"=>"name"},
+#     {"friendly_name"=>"id", "type"=>"string", "name"=>"id"}
+#   ],
+#   "rows" => [
+#     {"id" => 1, "name" => 'hoge'},
+#     {"id" => 2, "name" => 'fuga'},
+#     {"id" => 3, "name" => 'piyo'}
+#   ]
+# }
+```
+
 
 ## Development
 
