@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/redash_dynamic_query.svg)](https://badge.fury.io/rb/redash_dynamic_query)
+
 # RedashDynamicQuery
 
 execute query to redash with dynamic parameter
