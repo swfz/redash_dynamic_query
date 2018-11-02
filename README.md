@@ -44,6 +44,15 @@ p result['query_result']['data']
 # }
 ```
 
+## Options
+- user_apikey
+    - API Key in Redash(related user)
+- endpoint
+    - Redash url
+- interval
+    - polling interval(seconds)
+- timeout
+    - wait timeout seconds.
 
 ## Development
 
